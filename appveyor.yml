@@ -1,21 +1,37 @@
 version: 6.0.{build}
 pull_requests:
   do_not_increment_build_number: true
+
 image: Visual Studio 2022
 configuration: Release
+
 environment:
+  fast_finish: true  # set this flag to immediately finish build once one of the jobs fails.
   matrix:
   - solution_name: Src/SourceGrid.sln
   - solution_name: Src/WindowsFormsSample/WindowsFormsSample.sln
+
 before_build:
 - cmd: dotnet restore %solution_name%
+
 build:
   project: '%solution_name%'
   verbosity: minimal
+
 test:
   assemblies:
     only:
-    - Out\Test\Release\SourceGrid.Tests.dll
+    - Out\SourceGrid.Tests\Release\net6.0-windows\SourceGrid.Tests.dll
+
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: 363Qj0QSDyysi78uChTSZuIld9ivJUVD/kemowdmhto=
+    on:
+        branch: master
+    artifact: /.*(\.|\.s)nupkg/
+
 artifacts:
 - path: Out\
   name: SourceGrid
+- path: '**\*.nupkg'

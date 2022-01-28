@@ -5,6 +5,7 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <IsPackable>false</IsPackable>
+    <BaseOutputPath>..\..\Out\SourceGrid.Tests\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
