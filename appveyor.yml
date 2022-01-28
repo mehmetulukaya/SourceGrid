@@ -22,6 +22,9 @@ build:
   # MSBuild verbosity level
   verbosity: minimal
 
+after_build:
+  - dotnet pack Src\SourceGrid\SourceGrid.csproj
+
 test:
   assemblies:
     only:
