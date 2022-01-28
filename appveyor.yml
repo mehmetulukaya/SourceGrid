@@ -17,7 +17,7 @@ before_build:
 build:
   project: '%solution_name%'
   publish_nuget: true
-  publish_nuget_symbols: true
+  publish_nuget_symbols: false
 
   # MSBuild verbosity level
   verbosity: minimal
