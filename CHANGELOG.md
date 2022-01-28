@@ -1,8 +1,8 @@
 # SourceGrid
 
-## v6.0.0 (January 2022)
+## v6.0.0 (January 2022 by Michael Tsai)
 
-- Upgraded project file format to SDK-style.
+- Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).
 - Changed target framework from .NET 3.5 to .NET 6.
 - Moved DevAge.* source files into SourceGrid folder.
 - Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.

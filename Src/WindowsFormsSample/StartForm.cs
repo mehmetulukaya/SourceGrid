@@ -11,11 +11,11 @@ namespace WindowsFormsSample
 	/// </summary>
 	public class StartForm : System.Windows.Forms.Form
 	{
-		private System.Windows.Forms.MainMenu mainMenu1;
-		private System.Windows.Forms.MenuItem mnFile;
-		private System.Windows.Forms.MenuItem mnExit;
-		private System.Windows.Forms.MenuItem mnHelp;
-		private System.Windows.Forms.MenuItem mnAbout;
+		private System.Windows.Forms.MenuStrip mainMenu1;
+		private System.Windows.Forms.ToolStripMenuItem mnFile;
+		private System.Windows.Forms.ToolStripMenuItem mnExit;
+		private System.Windows.Forms.ToolStripMenuItem mnHelp;
+		private System.Windows.Forms.ToolStripMenuItem mnAbout;
 		private SourceGrid.Grid grid1;
 		/// <summary>
 		/// Required designer variable.
@@ -52,43 +52,39 @@ namespace WindowsFormsSample
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.mainMenu1 = new System.Windows.Forms.MainMenu();
-			this.mnFile = new System.Windows.Forms.MenuItem();
-			this.mnExit = new System.Windows.Forms.MenuItem();
-			this.mnHelp = new System.Windows.Forms.MenuItem();
-			this.mnAbout = new System.Windows.Forms.MenuItem();
+			this.mainMenu1 = new System.Windows.Forms.MenuStrip();
+			this.mnFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnExit = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnHelp = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnAbout = new System.Windows.Forms.ToolStripMenuItem();
 			this.grid1 = new SourceGrid.Grid();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
 			// 
-			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.mainMenu1.Items.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
 																					  this.mnFile,
 																					  this.mnHelp});
 			// 
 			// mnFile
 			// 
-			this.mnFile.Index = 0;
-			this.mnFile.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.mnFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
 																				   this.mnExit});
 			this.mnFile.Text = "File";
 			// 
 			// mnExit
 			// 
-			this.mnExit.Index = 0;
 			this.mnExit.Text = "Exit";
 			this.mnExit.Click += new System.EventHandler(this.mnExit_Click);
 			// 
 			// mnHelp
 			// 
-			this.mnHelp.Index = 1;
-			this.mnHelp.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.mnHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
 																				   this.mnAbout});
 			this.mnHelp.Text = "Help";
 			// 
 			// mnAbout
 			// 
-			this.mnAbout.Index = 0;
 			this.mnAbout.Text = "About";
 			// 
 			// grid1
@@ -113,7 +109,7 @@ namespace WindowsFormsSample
 			this.BackColor = System.Drawing.SystemColors.Window;
 			this.ClientSize = new System.Drawing.Size(624, 305);
 			this.Controls.Add(this.grid1);
-			this.Menu = this.mainMenu1;
+			this.MainMenuStrip = this.mainMenu1;
 			this.Name = "StartForm";
 			this.Text = "Examples Explorer";
 			this.ResumeLayout(false);
@@ -138,9 +134,9 @@ namespace WindowsFormsSample
 
 		protected override void OnLoad(EventArgs e)
 		{
-			base.OnLoad (e);
+            base.OnLoad(e);
 
-			grid1.ColumnsCount = 2;
+            grid1.ColumnsCount = 2;
 
 			SourceGrid.Cells.Controllers.Button linkEvents = new SourceGrid.Cells.Controllers.Button();
 			linkEvents.Executed += new EventHandler(linkEvents_Executed);
@@ -190,8 +186,9 @@ namespace WindowsFormsSample
 			row = grid1.RowsCount;
 			grid1.Rows.Insert(row);
 
-			SourceGrid.Cells.ColumnHeader header1 = new SourceGrid.Cells.ColumnHeader("Sample N°");
-            header1.View = headerView;
+			SourceGrid.Cells.ColumnHeader header1 = new SourceGrid.Cells.ColumnHeader("Sample N¢X");
+
+			header1.View = headerView;
 			header1.AutomaticSortEnabled = false;
 			grid1[row, 0] = header1;
 

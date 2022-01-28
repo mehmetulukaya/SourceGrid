@@ -13,9 +13,9 @@ For more detailed information, Refer article at [CodeProject](https://www.codepr
 - Visual Studio 2022
 - .NET 6
 
-# Changes
+# Recent Changes
 
-- Upgraded project file format to SDK-style.
+- Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).
 - Changed target framework from .NET 3.5 to .NET 6.
 - Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.
 - Removed unused code files.
