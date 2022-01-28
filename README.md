@@ -20,7 +20,7 @@ For more detailed information, Refer article at [CodeProject](https://www.codepr
 - Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.
 - Removed unused code files.
 
-See CHANGELOG.md for more information.
+See [CHANGELOG.md](CHANGELOG.md) for more information.
 
 See https://github.com/siemens/sourcegrid for original README.
 
