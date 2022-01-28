@@ -4,7 +4,9 @@
 using System;
 using System.Globalization;
 using NUnit.Framework;
+using SourceGrid;
 using SourceGrid.Cells;
+using Range = SourceGrid.Range;
 
 namespace SourceGrid.Tests
 {
