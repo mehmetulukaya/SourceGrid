@@ -3,14 +3,13 @@ pull_requests:
   do_not_increment_build_number: true
 image: Visual Studio 2022
 configuration: Release
+platform: Any CPU
 environment:
   matrix:
-  - solution_name: SourceGrid_All.sln
+  - solution_name: Src/SourceGrid.sln
   - solution_name: Src/WindowsFormsSample/WindowsFormsSample.sln
-install:
-- cmd: nuget update -self
 before_build:
-- cmd: nuget restore
+- cmd: dotnet restore %solution_name%
 build:
   project: '%solution_name%'
   verbosity: minimal
