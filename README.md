@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/bi9kof78cbfrbknf?svg=true)](https://ci.appveyor.com/project/sandhraprakash/sourcegrid)
+[![Build status](https://ci.appveyor.com/api/projects/status/19e7evu87w8uhr74?svg=true)](https://ci.appveyor.com/project/huanlin/SourceGrid)
 ## SourceGrid
 
 SourceGrid is a free open source grid control. Supports virtual grid, custom cells and editors, advanced formatting options and many others features
