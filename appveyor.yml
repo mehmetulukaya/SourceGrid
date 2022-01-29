@@ -33,7 +33,7 @@ deploy:
     api_key:
       secure: F+FEV17LBxIXlSSCC5LD2P9rhkpjGzzD34LaalIJRCSW+8mM9YeI08i9WU/0ZojP
     on:
-        branch: master
+      APPVEYOR_REPO_TAG: true
     artifact: /.*(\.|\.s)nupkg/
 
 artifacts:
