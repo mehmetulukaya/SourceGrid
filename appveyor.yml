@@ -17,8 +17,6 @@ before_build:
 
 build:
   project: '%solution_name%'
-  publish_nuget: true
-  publish_nuget_symbols: false
 
   # MSBuild verbosity level
   verbosity: minimal
@@ -30,6 +28,14 @@ test:
   assemblies:
     only:
     - Out\SourceGrid.Tests\Release\net6.0-windows\SourceGrid.Tests.dll
+
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: F+FEV17LBxIXlSSCC5LD2P9rhkpjGzzD34LaalIJRCSW+8mM9YeI08i9WU/0ZojP
+    on:
+        branch: master
+    artifact: /.*(\.|\.s)nupkg/
 
 artifacts:
 - path: Out\
