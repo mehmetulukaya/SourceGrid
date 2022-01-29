@@ -1,4 +1,5 @@
 version: 6.0.{build}
+skip_non_tags: true
 pull_requests:
   do_not_increment_build_number: true
 
@@ -29,14 +30,6 @@ test:
   assemblies:
     only:
     - Out\SourceGrid.Tests\Release\net6.0-windows\SourceGrid.Tests.dll
-
-deploy:
-  - provider: NuGet
-    api_key:
-      secure: F+FEV17LBxIXlSSCC5LD2P9rhkpjGzzD34LaalIJRCSW+8mM9YeI08i9WU/0ZojP
-    on:
-        branch: master
-    artifact: /.*(\.|\.s)nupkg/
 
 artifacts:
 - path: Out\
