@@ -21,6 +21,9 @@ Note: this fork is created by Michael Tsai to support .NET 6.
 - Changed target framework from .NET 3.5 to .NET 6.
 - Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.
 - Removed unused code files.
+- Use [MinVer](https://github.com/adamralph/minver) for easy versioning with tag name.
+  1. Add MinVer package to your project.
+  2. When release a new version, simply add tag name using "git tag -a" command to add a version tag and push to the Git server. That's it!
 
 See [CHANGELOG.md](CHANGELOG.md) for more information.
 
