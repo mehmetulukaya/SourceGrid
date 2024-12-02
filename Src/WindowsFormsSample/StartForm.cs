@@ -124,7 +124,9 @@ namespace WindowsFormsSample
 		static void Main() 
 		{
 			Application.EnableVisualStyles();
-			Application.DoEvents();
+            Application.SetCompatibleTextRenderingDefault(true);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.DoEvents();
 
 			//This is an optional line, used to enable Windows XP theme.
 			//DevAge.Windows.Forms.ThemePainter.CurrentProvider = new DevAge.Windows.Forms.ThemeProviderXP();

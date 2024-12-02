@@ -1,50 +1,55 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<OutputType>WinExe</OutputType>
-		<TargetFramework>net6.0-windows</TargetFramework>
-		<ApplicationIcon>App.ico</ApplicationIcon>
-		<RootNamespace>WindowsFormsSample</RootNamespace>
-		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-		<StartupObject>WindowsFormsSample.StartForm</StartupObject>
-		<UseWindowsForms>true</UseWindowsForms>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
-	<ItemGroup>
-		<Content Include="App.ico" />
-		<EmbeddedResource Include="GridSamples\SampleData.xml" />
-		<EmbeddedResource Include="GridSamples\SampleData2.xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Remove="GridSamples\frmSample1.cs" />
-		<Compile Remove="GridSamples\frmSample17.cs" />
-		<Compile Remove="GridSamples\frmSample18.cs" />
-		<Compile Remove="GridSamples\frmSample27.cs" />
-		<Compile Remove="GridSamples\frmSample29.cs" />
-		<Compile Remove="GridSamples\frmSample3.cs" />
-		<Compile Remove="GridSamples\frmSample41.cs" />
-		<Compile Remove="GridSamples\frmSample43.cs" />
-		<Compile Remove="GridSamples\frmSample49.cs" />
-		<Compile Remove="GridSamples\frmSample49.Designer.cs" />
-		<Compile Remove="GridSamples\frmSample9.cs" />
-		<EmbeddedResource Remove="GridSamples\frmSample1.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample17.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample18.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample27.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample29.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample3.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample41.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample43.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample49.resx" />
-		<EmbeddedResource Remove="GridSamples\frmSample9.resx" />
-	</ItemGroup>
-	<PropertyGroup>
-		<Nullable>disable</Nullable>
-		<BaseOutputPath>..\..\Out\WindowsFormsSample\</BaseOutputPath>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\SourceGrid\SourceGrid.csproj" />
-	</ItemGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <RootNamespace>WindowsFormsSample</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>WindowsFormsSample.StartForm</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+	
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+    <ApplicationUseCompatibleTextRendering>true</ApplicationUseCompatibleTextRendering>
+    <ApplicationHighDpiMode>PerMonitor</ApplicationHighDpiMode>
+	  
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="GridSamples\SampleData.xml" />
+    <EmbeddedResource Include="GridSamples\SampleData2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GridSamples\frmSample1.cs" />
+    <Compile Remove="GridSamples\frmSample17.cs" />
+    <Compile Remove="GridSamples\frmSample18.cs" />
+    <Compile Remove="GridSamples\frmSample27.cs" />
+    <Compile Remove="GridSamples\frmSample29.cs" />
+    <Compile Remove="GridSamples\frmSample3.cs" />
+    <Compile Remove="GridSamples\frmSample41.cs" />
+    <Compile Remove="GridSamples\frmSample43.cs" />
+    <Compile Remove="GridSamples\frmSample49.cs" />
+    <Compile Remove="GridSamples\frmSample49.Designer.cs" />
+    <Compile Remove="GridSamples\frmSample9.cs" />
+    <EmbeddedResource Remove="GridSamples\frmSample1.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample17.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample18.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample27.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample29.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample3.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample41.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample43.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample49.resx" />
+    <EmbeddedResource Remove="GridSamples\frmSample9.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <Nullable>disable</Nullable>
+    <BaseOutputPath>..\..\Out\WindowsFormsSample\</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SourceGrid\SourceGrid.csproj" />
+  </ItemGroup>
 </Project>
