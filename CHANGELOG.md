@@ -1,5 +1,9 @@
 # SourceGrid
 
+## v8.0.0 (December 2024 by Mehmet Ulukaya)
+- Changed target framework from .NET 6 to .NET 8.
+- HDPi avarness settings changed
+
 ## v6.0.0 (January 2022 by Michael Tsai)
 
 - Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).

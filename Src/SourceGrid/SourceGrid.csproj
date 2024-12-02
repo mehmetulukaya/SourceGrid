@@ -10,10 +10,10 @@
     <Authors>Davide Icardi, Darius Damalakas</Authors>
     <Copyright>Copyright (c) 2005 - 2012 Davide Icardi, Darius Damalakas</Copyright>
     <BaseOutputPath>..\..\Out\SourceGrid</BaseOutputPath>
-    <PackageId>$(AssemblyName)-huanlin</PackageId>
+    <PackageId>$(AssemblyName)-mehmetulukaya</PackageId>
     <Description>A grid control for .NET Windows Forms application.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/huanlin/SourceGrid</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mehmetulukaya/SourceGrid</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>grid</PackageTags>
   </PropertyGroup>
