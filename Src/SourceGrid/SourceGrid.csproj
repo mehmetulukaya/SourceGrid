@@ -7,7 +7,7 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<SignAssembly>False</SignAssembly>
 		<AssemblyOriginatorKeyFile>SourceGrid.snk</AssemblyOriginatorKeyFile>
-		<Authors>Davide Icardi, Darius Damalakas</Authors>
+		<Authors>Davide Icardi, Darius Damalakas and others...</Authors>
 		<Copyright>Copyright (c) 2005 - 2024 Davide Icardi, Darius Damalakas and others...</Copyright>
 		<BaseOutputPath>..\..\Out\SourceGrid</BaseOutputPath>
 		<PackageId>$(AssemblyName)-mehmetulukaya</PackageId>
