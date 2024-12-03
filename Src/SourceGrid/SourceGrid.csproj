@@ -16,10 +16,16 @@
 		<RepositoryUrl>https://github.com/mehmetulukaya/SourceGrid</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>grid</PackageTags>
-		<AssemblyVersion>8.0.8</AssemblyVersion>
-		<Version>8.0.8</Version>
+		
+		<MinVerMinimumMajorMinor>8.0</MinVerMinimumMajorMinor>
+		<!-- Ön sürüm takısı -->
+		<MinVerTagPrefix>v</MinVerTagPrefix>
+		<MinVerDefaultPreReleasePhase>beta</MinVerDefaultPreReleasePhase>
+		
 	</PropertyGroup>
 
+
+	
 	<ItemGroup>
 		<None Include="..\..\README.md">
 			<Pack>True</Pack>
