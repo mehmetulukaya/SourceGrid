@@ -31,7 +31,7 @@ test:
 deploy:
   - provider: NuGet
     api_key:
-      secure: F+FEV17LBxIXlSSCC5LD2P9rhkpjGzzD34LaalIJRCSW+8mM9YeI08i9WU/0ZojP
+      secure: AEuTAVKJ64rq9Sob2Xo+3xww2JKEjl1yCegEDz3PUL6MPQrZWxOLSUW0C/erTZ7N
     on:
       APPVEYOR_REPO_TAG: true
     artifact: /.*(\.|\.s)nupkg/
