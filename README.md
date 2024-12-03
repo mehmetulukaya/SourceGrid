@@ -1,5 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/rgpayylq208kwt3g/branch/master?svg=true)](https://ci.appveyor.com/project/mehmetulukaya/sourcegrid-mehmetulukaya/branch/master) 
- ![NuGet Downloads](https://img.shields.io/nuget/dt/SourceGrid-mehmetulukaya?style=flat)
+ ![NuGet Downloads](https://img.shields.io/nuget/dt/SourceGrid-mehmetulukaya?style=flat) [![NuGet version](https://badge.fury.io/nu/SourceGrid-mehmetulukaya.svg)](https://badge.fury.io/nu/SourceGrid-mehmetulukaya)
 
 
 ## SourceGrid
