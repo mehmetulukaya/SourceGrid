@@ -96,8 +96,27 @@ jobs:
         Write-Host "Contents of nupkg directory:"
         Get-ChildItem "../nupkg/" -Force
 
+    # Debug - Check API Key
+    - name: Debug - Check API Key
+      run: |
+        $key = "${{ secrets.NUGET_API_KEY }}"
+        if ($key) {
+          Write-Host "API Key is available (first 4 chars: $($key.Substring(0, [Math]::Min(4, $key.Length))))****"
+        } else {
+          Write-Error "API Key is NOT available"
+          exit 1
+        }
+
     # Push to NuGet.org
     - name: Push to NuGet.org
-      run: dotnet nuget push "../nupkg/SourceGrid-mehmetulukaya.*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
-
-
+      run: |
+        $packages = Get-ChildItem "../nupkg" -Filter *.nupkg | Where-Object { $_.Name -notlike "*Tests*" }
+        if ($packages.Count -eq 0) {
+          Write-Warning "No packages found to push"
+          exit 0
+        }
+    
+        foreach ($package in $packages) {
+          Write-Host "Pushing package: $($package.Name)"
+          dotnet nuget push $package.FullName --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        }
