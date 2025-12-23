@@ -60,7 +60,7 @@ jobs:
 
   publish-nuget:
     needs: build
-    if: startsWith(github.ref, 'refs/tags/v')
+    # if: startsWith(github.ref, 'refs/tags/v')
     runs-on: windows-latest
     
     env:
