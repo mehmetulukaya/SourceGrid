@@ -1,18 +1,16 @@
-name: Publish to NuGet
+name: Build and Publish
 
 on:
   push:
     branches:
       - master
-    paths-ignore:
-      - '**/*.md'
-      - '**/*.txt'
-      - '**/*.gitignore'
+    paths:
+      - 'Src/**'
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -23,10 +21,34 @@ jobs:
         dotnet-version: '10.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore SourceGrid.sln
+      run: dotnet restore
+      working-directory: Src
 
-    - name: Build and Pack
-      run: dotnet pack SourceGrid.sln --configuration Release --no-restore --output ./nupkg
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: Src
+
+  publish:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')  # Sadece tag'lerde yayımla
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 10
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: Src
+
+    - name: Pack
+      run: dotnet pack --configuration Release --no-restore --output ../nupkg
+      working-directory: Src
 
     - name: Push to NuGet.org
       run: |
