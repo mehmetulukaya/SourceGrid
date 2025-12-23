@@ -62,6 +62,7 @@ jobs:
     needs: build
     # if: startsWith(github.ref, 'refs/tags/v')
     runs-on: windows-latest
+    environment: nuget  # Eðer environment kullanýyorsanýz
   
     env:
       Solution_Name: Src\SourceGrid.sln
