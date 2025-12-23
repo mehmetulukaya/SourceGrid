@@ -1,14 +1,9 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: .NET Core Desktop
 
 on:
   push:
     branches: [ "master" ]
-    tags: [ "v*" ]  # Tag'lerde de çalışsın
+    tags: [ "v*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -42,10 +37,6 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
 
-    # Execute all unit tests in the solution
-    # - name: Execute unit tests
-    #   run: dotnet test
-
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
@@ -60,7 +51,7 @@ jobs:
 
     # Upload build artifacts
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # v3 yerine v4
       with:
         name: Build-${{ matrix.configuration }}
         path: |
@@ -69,7 +60,7 @@ jobs:
 
   publish-nuget:
     needs: build
-    if: startsWith(github.ref, 'refs/tags/v')  # Sadece tag'lerde yayımla
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: windows-latest
     
     env:
@@ -106,4 +97,3 @@ jobs:
           --api-key ${{ secrets.NUGET_API_KEY }} `
           --source https://api.nuget.org/v3/index.json `
           --skip-duplicate
-
