@@ -3,7 +3,7 @@ name: Publish to NuGet
 on:
   push:
     tags:
-      - 'v*'  # Sadece v1.0.0 gibi bir etiketleme yapıldığında çalışır
+      - 'v*'
 
 jobs:
   build-and-publish:
@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '10.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore SourceGrid.sln
 
     - name: Build and Pack
-      run: dotnet pack --configuration Release --no-restore --output ./nupkg
+      run: dotnet pack SourceGrid.sln --configuration Release --no-restore --output ./nupkg
 
     - name: Push to NuGet.org
       run: |
