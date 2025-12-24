@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/rgpayylq208kwt3g/branch/master?svg=true)](https://ci.appveyor.com/project/mehmetulukaya/sourcegrid-mehmetulukaya/branch/master) 
+[![.NET Core Desktop](https://github.com/mehmetulukaya/SourceGrid/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/mehmetulukaya/SourceGrid/actions/workflows/dotnet-desktop.yml)
  ![NuGet Downloads](https://img.shields.io/nuget/dt/SourceGrid-mehmetulukaya?style=flat) [![NuGet version](https://badge.fury.io/nu/SourceGrid-mehmetulukaya.svg)](https://badge.fury.io/nu/SourceGrid-mehmetulukaya)
 
 
@@ -11,7 +11,7 @@ SourceGrid is a Windows Forms control written entirely in C#, goal is to create 
 
 For more detailed information, Refer article at [CodeProject](https://www.codeproject.com/Articles/3531/SourceGrid-Open-Source-C-Grid-Control)
 
-Note: this fork is created by Mehmet Ulukaya to support .NET 8.
+Note: this fork is created by Mehmet Ulukaya to support .NET 8~10.
 
 # Preconditions
 
@@ -21,7 +21,7 @@ Note: this fork is created by Mehmet Ulukaya to support .NET 8.
 # Recent Changes
 
 - Upgraded project file format to SDK-style using [.NET Upgrade Assistant](https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview).
-- Changed target framework from .NET 3.5 to .NET 8.
+- Changed target framework from .NET 3.5 to .NET 8~10.
 - Fixed obsolete code. For example: ContextMenu is replaced by ContextMenuStrip.
 - Removed unused code files.
 - Use [MinVer](https://github.com/adamralph/minver) for easy versioning with tag name.
