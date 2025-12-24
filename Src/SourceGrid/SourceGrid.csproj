@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+		<TargetFramework>net10.0-windows</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<SignAssembly>False</SignAssembly>
 		<AssemblyOriginatorKeyFile>SourceGrid.snk</AssemblyOriginatorKeyFile>
 		<Authors>Davide Icardi, Darius Damalakas and others...</Authors>
-		<Copyright>Copyright (c) 2005 - 2024 Davide Icardi, Darius Damalakas and others...</Copyright>
+		<Copyright>Copyright (c) 2005 - 2025 Davide Icardi, Darius Damalakas and others...</Copyright>
 		<BaseOutputPath>..\..\Out\SourceGrid</BaseOutputPath>
 		<PackageId>$(AssemblyName)-mehmetulukaya</PackageId>
 		<Description>A grid control for .NET Windows Forms application.</Description>
@@ -17,10 +17,10 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>grid</PackageTags>
 		
-		<MinVerMinimumMajorMinor>8.0</MinVerMinimumMajorMinor>
+		<MinVerMinimumMajorMinor>10.0</MinVerMinimumMajorMinor>
 		<!-- Ön sürüm takısı -->
 		<MinVerTagPrefix>v</MinVerTagPrefix>
-		<MinVerDefaultPreReleasePhase>beta</MinVerDefaultPreReleasePhase>
+		<MinVerDefaultPreReleasePhase>stable</MinVerDefaultPreReleasePhase>
 		
 	</PropertyGroup>
 
@@ -39,7 +39,6 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="System.Resources.Extensions" Version="10.0.1" />
 	</ItemGroup>
 	
 	<PropertyGroup>
