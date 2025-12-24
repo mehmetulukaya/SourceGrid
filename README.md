@@ -1,6 +1,5 @@
 [![.NET Core Desktop](https://github.com/mehmetulukaya/SourceGrid/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/mehmetulukaya/SourceGrid/actions/workflows/dotnet-desktop.yml)
- ![NuGet Downloads](https://img.shields.io/nuget/dt/SourceGrid-mehmetulukaya?style=flat) [![NuGet version](https://badge.fury.io/nu/SourceGrid-mehmetulukaya.svg)](https://badge.fury.io/nu/SourceGrid-mehmetulukaya)
-
+ ![NuGet Downloads](https://img.shields.io/nuget/dt/SourceGrid-mehmetulukaya) [![NuGet version](https://badge.fury.io/nu/SourceGrid-mehmetulukaya.svg)](https://badge.fury.io/nu/SourceGrid-mehmetulukaya)
 
 ## SourceGrid
 
